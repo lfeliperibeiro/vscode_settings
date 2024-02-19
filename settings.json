@@ -3,7 +3,8 @@
     "javascript": "jsx"
   },
   "workbench.startupEditor": "newUntitledFile",
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
+  "editor.lineHeight": 1.7,
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.rulers": [
@@ -17,9 +18,9 @@
     ".stylelintrc": "json",
     "*.tsx": "typescriptreact",
     ".env.*": "dotenv",
-    ".prettierrc": "json"
+    ".prettierrc": "json",
+    ".env*": "dotenv"
   },
-  "screencastMode.onlyKeyboardShortcuts": true,
   "cSpell.userWords": [
     "chakra",
     "clsx",
@@ -38,7 +39,6 @@
     "Onboarded",
     "pallas",
     "prefetch",
-    "rocketseat",
     "rotion",
     "trpc",
     "TRPC",
@@ -52,12 +52,10 @@
   "editor.parameterHints.enabled": false,
   "editor.renderLineHighlight": "gutter",
   "cSpell.language": "en,pt",
-  "editor.lineHeight": 24,
   "material-icon-theme.languages.associations": {
     "dotenv": "tune"
   },
   "typescript.updateImportsOnFileMove.enabled": "never",
-  
   "material-icon-theme.files.associations": {
     "tsconfig.json": "tune",
     "*.webpack.js": "webpack",
@@ -133,6 +131,14 @@
     "!scala",
     "!scss"
   ],
+  "symbols.files.associations": {
+    "*.module.ts": "nest",
+    "*.guard.ts": "typescript",
+    "*spec.ts": "ts-test",
+    "*.e2e-spec.ts": "ts-test",
+    ".env.config.e2e.ts": "vite",
+    ".env.example": "gear"
+  },
   "editor.acceptSuggestionOnCommitCharacter": false,
   "explorer.compactFolders": false,
   "git.enableSmartCommit": true,
@@ -141,16 +147,11 @@
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    // "source.organizeImports": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.semanticHighlighting.enabled": false,
-  "breadcrumbs.enabled": true,
   "workbench.productIconTheme": "fluent-icons",
   "editor.fontFamily": "FiraCode Nerd Font",
-  "gitlens.codeLens.authors.enabled": false,
-  "editor.tabSize": 2,
-  "security.workspace.trust.untrustedFiles": "newWindow",
   "files.exclude": {
     "**\/CVS": true,
     "**\/.DS_Store": true,
@@ -159,9 +160,7 @@
     "**\/.git": true,
     // "node_modules": true
   },
-  "tabnine.experimentalAutoImports": true,
   "gitlens.codeLens.enabled": false,
-  "workbench.iconTheme": "symbols",
   "editor.minimap.enabled": false,
   "update.mode": "start",
   "terminal.integrated.gpuAcceleration": "off",
@@ -169,7 +168,75 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "workbench.editor.untitled.hint": "hidden",
-  "workbench.colorTheme": "Shades of Purple (Super Dark)",
-  "symbols.hidesExplorerArrows": false
+  "symbols.hidesExplorerArrows": false,
+  "editor.tokenColorCustomizations": {
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "textMateRules": []
+  },
+  "dotenv.enableAutocloaking": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Aura Dark",
+  "workbench.iconTheme": "symbols",
+  "workbench.editor.empty.hint": "hidden",
+  "console-ninja.output.showLogsOnlyFromOpenedFiles": true,
+  "console-ninja.output.showLogsFromMultipleRunningToolsTogether": true,
+  "console-ninja.captureFunctions": true,
+  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+    "live-server-extension": true,
+    "live-preview-extension": true
+  },
+  "console-ninja.allowConsoleLogToTriggerPredictions": true,
+  "console-ninja.output.showLogsFromLogPointsOnly": true,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+
+  "breadcrumbs.enabled": false,
+
+  // Aura theme customization
+  "workbench.colorCustomizations": {
+    "[Aura Dark]": {
+      "editor.background": "#110f17",
+      "terminal.background": "#110f17",
+      "activityBar.background": "#110f17",
+      "statusBar.background": "#110f17",
+      "editorGroupHeader.tabsBackground": "#110f17",
+      "tab.inactiveBackground": "#110f17"
+    }
+  },
+  // Misc
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "breadcrumbs.filePath": "off",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
 }
